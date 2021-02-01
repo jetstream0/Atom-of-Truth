@@ -1,0 +1,9 @@
+#article-content {
+  width: 80%;
+  text-align: left;
+}
+
+#article-content p {
+  text-indent: 5%;
+  font-size: 17px;
+}

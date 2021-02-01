@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ article.Title }}
+{% endblock %}
+
+{% block description %}
+content="{{article.NoHTML[:100]+'...'}}"
+{% endblock %}
+
+{% block author %}
+ content="Atom of Truth"
+{% endblock %}
+
+{% block stylesheets %}
+<link href="{{ url_root+'/static/article.css' }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<center>
+  <h1>{{ article.Title }}</h1>
+  <span>{{ article.Date }}</span>
+  <div id="article-content" >{{ article.Content|safe }}</div>
+</center>
+{% endblock %}

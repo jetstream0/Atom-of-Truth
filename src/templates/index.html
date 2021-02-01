@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Atom of Truth
+{% endblock %}
+
+{% block description %}
+content="Finest News Source to Ever Exist, Ever."
+{% endblock %}
+
+{% block keywords %}
+content="news, truth, us news, world news, accurate news, business news, general news, satirical news, newspaper, satitircal newspaper, online news, online newspaper, satire"
+{% endblock %}
+
+{% block stylesheets %}
+<link href="static/index.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<div id="news">
+  {% for article in articles %}
+       <article class="news-item">
+          <h1><a href="{{ '/article/'+article['FileName'] }}" class="title">{{ article.Title }}</a></h1>
+          <p>{{ article.NoHTML[:85]+"..." }}</p>
+        </article>
+  {% endfor %}
+</div>
+{% endblock %}

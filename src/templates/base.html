@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  {% set url_root = 'https://Atom-of-Truth.rediar.repl.co' %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" {% block description %}{% endblock %}>
+    <meta name="author" {% block author %}{% endblock %}>
+    <meta name="keywords" {% block keywords %}{% endblock %}>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{{ url_root+'/static/styles.css' }}" rel="stylesheet" type="text/css" />
+    {% block stylesheets %}{% endblock %}
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div id="nav-bar">
+      <img src="{{ url_root+'/static/files/logo of truth.png' }}" id="nav-logo"/>
+      <ul id="nav-list">
+        <li class="nav-items"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-items"><a href="{{ url_root+'/about'}}"class="nav-link">About</a></li>
+      </ul>
+    </div>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+      <footer>
+        <center>
+          <p id="copyright">© 2021 Atom of Truth</p>
+          <p id="satire">Yes, this is satire</p>
+        </center>
+      </footer>
+    </div>
+  </body>
+</html>

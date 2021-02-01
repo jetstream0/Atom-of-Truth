@@ -1,0 +1,15 @@
+#news {
+  padding: 5px 5% 5px 5%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.news-item {
+  text-align: center;
+}
+
+.title:link, .title:visited, .title:hover, .title:active {
+  color: black;
+  text-decoration: none;
+}
